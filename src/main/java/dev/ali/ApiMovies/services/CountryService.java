@@ -2,9 +2,12 @@ package dev.ali.ApiMovies.services;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import dev.ali.ApiMovies.models.Country;
 import dev.ali.ApiMovies.repositories.CountryRepository;
 
+@Service
 public class CountryService {
 
     CountryRepository repository;
@@ -14,8 +17,8 @@ public class CountryService {
     }
 
 
-    public List<Country> getAll(CountryRepository countryRepository){
-        List<Country> countries = countryRepository.findAll();
+    public List<Country> getAll(){
+        List<Country> countries = repository.findAll();
         return countries;
 
     }
