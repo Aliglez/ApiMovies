@@ -3,6 +3,7 @@ package dev.ali.ApiMovies.Controllers;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,4 +26,12 @@ public class CountryController {
         List<Country> countries = service.getAll();
         return countries;
     }  
+
+    @GetMapping(path = "/{id}")
+        public Country show(@PathVariable("id") Long id) throws Exception {
+
+        Country country = service.getById(id);
+        return country;
+
+    }
 }

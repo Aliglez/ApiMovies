@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import dev.ali.ApiMovies.exceptions.country.CountryNotFoundException;
 import dev.ali.ApiMovies.models.Country;
 import dev.ali.ApiMovies.repositories.CountryRepository;
 
@@ -23,4 +24,9 @@ public class CountryService {
 
     }
     
+    public Country getById(Long id){
+       Country country = repository.findById(id).orElseThrow(() -> new CountryNotFoundException("Country not found"));
+        return country;
+        
+        }
 }
