@@ -29,4 +29,11 @@ public class CountryService {
         return country;
         
         }
+
+    public Country save(Country country) {
+
+        Country newCountry = repository.save(country);
+        return newCountry;
+        
+    }
 }
