@@ -30,10 +30,14 @@ public class CountryService {
         
         }
 
-    public Country save(Country country) {
+        public Country save(Country country) {
 
-        Country newCountry = repository.save(country);
-        return newCountry;
-        
+            Country newCountry = repository.save(country);
+            return newCountry;
+            
+        }
+
+    public Country getByName(String name) {
+        return null;
     }
 }

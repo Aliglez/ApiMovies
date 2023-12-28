@@ -2,6 +2,7 @@ package dev.ali.ApiMovies.Controllers;
 
 import java.util.List;
 
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,7 +19,6 @@ import dev.ali.ApiMovies.services.CountryService;
 public class CountryController {
 
     CountryService service;
-    private Country newCountry;
 
     public CountryController(CountryService service) {
         this.service = service;
@@ -32,10 +32,10 @@ public class CountryController {
     }  
 
     @GetMapping(path = "/{id}")
-        public Country show(@PathVariable("id") Long id) throws Exception {
+        public ResponseEntity<Country> show(@PathVariable("id") Long id) throws Exception {
 
         Country country = service.getById(id);
-        return country;
+        return ResponseEntity.status(HttpStatusCode.valueOf(200)).body(country);
 
     }
 
