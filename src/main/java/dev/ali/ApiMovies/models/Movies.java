@@ -1,5 +1,6 @@
 package dev.ali.ApiMovies.models;
 
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,16 +17,16 @@ public class Movies {
     private Long id;
     
     private String title;
-    private short year;
+    private Integer release_year;
     private String description;
     private short running_time;
 
     public Movies() {
     }
 
-    public Movies(String title, short year, String description, short running_time) {
+    public Movies(String title, Integer release_year, String description, short running_time) {
         this.title = title;
-        this.year = year;
+        this.release_year = release_year;
         this.description = description;
         this.running_time = running_time;
     }
@@ -46,15 +47,15 @@ public class Movies {
         this.title = title;
     }
 
-    public short getYear() {
-        return year;
+    public Integer getYear() {
+        return release_year;
     }
 
-    public void setYear(short year) {
-        this.year = year;
+    public void setYear(Integer release_year) {
+        this.release_year = release_year;
     }
 
-    public String getDescription() {
+public String getDescription() {
         return description;
     }
 
@@ -68,7 +69,7 @@ public class Movies {
 
     public void setRunning_time(short running_time) {
         this.running_time = running_time;
-    }
+    } 
 
     
     
