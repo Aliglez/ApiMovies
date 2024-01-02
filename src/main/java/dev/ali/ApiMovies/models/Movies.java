@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -20,6 +22,11 @@ public class Movies {
     private Integer release_year;
     private String description;
     private short running_time;
+
+    
+    @ManyToOne
+    @JoinColumn(name = "genre_id", nullable = true)
+    private Genres genres;
 
     public Movies() {
     }
