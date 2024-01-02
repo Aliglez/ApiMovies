@@ -1,6 +1,5 @@
 package dev.ali.ApiMovies.models;
 
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,9 +12,10 @@ import jakarta.persistence.Table;
 public class Movies {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) @Column(name = "id_movie")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_movie")
     private Long id;
-    
+
     private String title;
     private Integer release_year;
     private String description;
@@ -55,7 +55,7 @@ public class Movies {
         this.release_year = release_year;
     }
 
-public String getDescription() {
+    public String getDescription() {
         return description;
     }
 
@@ -69,8 +69,6 @@ public String getDescription() {
 
     public void setRunning_time(short running_time) {
         this.running_time = running_time;
-    } 
+    }
 
-    
-    
 }

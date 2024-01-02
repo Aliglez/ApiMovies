@@ -7,3 +7,12 @@ INSERT INTO movies (id_movie, title, release_year, description, running_time) VA
 INSERT INTO movies (id_movie, title, release_year, description, running_time) VALUES (default,'Fallen Leaves', 2023, 'Ansa es soltera y vive en Helsinki. Trabaja con un contrato de cero horas en un supermercado, abasteciendo los estantes; luego clasifica el plástico reciclable. ', 81);
 
 INSERT INTO movies (id_movie, title, release_year, description, running_time) VALUES (default,'Godzilla: Minus One', 2023, 'Japón, desolado tras el fin de la segunda guerra mundial, entra en crisis tras la aparencia de un monstruo atómico.', 125);
+
+
+-- GENRES
+
+INSERT INTO genres (id_genre, genre_name) VALUES (default,'Drama');
+INSERT INTO genres (id_genre, genre_name) VALUES (default,'Comedy');
+INSERT INTO genres (id_genre, genre_name) VALUES (default,'Fantasy');
+INSERT INTO genres (id_genre, genre_name) VALUES (default,'Documental');
+
