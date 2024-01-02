@@ -5,6 +5,19 @@ INSERT INTO genres (id_genre, genre_name) VALUES (default,'Comedy');
 INSERT INTO genres (id_genre, genre_name) VALUES (default,'Fantasy');
 INSERT INTO genres (id_genre, genre_name) VALUES (default,'Documental');
 
+--ACTORS
+INSERT INTO actors (id_actor, actor_name) VALUES (default, 'Enzo Vogrincic Roldán');
+INSERT INTO actors (id_actor, actor_name) VALUES (default, 'Agustin Prdella');
+INSERT INTO actors (id_actor, actor_name) VALUES (default, 'Beyonce');
+INSERT INTO actors (id_actor, actor_name) VALUES (default, 'Diana Ross');
+INSERT INTO actors (id_actor, actor_name) VALUES (default, 'Choko lida');
+INSERT INTO actors (id_actor, actor_name) VALUES (default, 'Hohi Aoki');
+INSERT INTO actors (id_actor, actor_name) VALUES (default, 'Eitaro Ozawa');
+INSERT INTO actors (id_actor, actor_name) VALUES (default, 'Alma Pöysti');
+INSERT INTO actors (id_actor, actor_name) VALUES (default, 'Jussi Vatanen');
+INSERT INTO actors (id_actor, actor_name) VALUES (default, 'Ryunosuke Kamiki');
+INSERT INTO actors (id_actor, actor_name) VALUES (default, 'Minami Hamabe');
+
 
 -- MOVIES
 
@@ -19,5 +32,17 @@ INSERT INTO movies (id_movie, title, release_year, description, running_time, ge
 INSERT INTO movies (id_movie, title, release_year, description, running_time, genre_id) VALUES (default,'Godzilla: Minus One', 2023, 'Japón, desolado tras el fin de la segunda guerra mundial, entra en crisis tras la aparencia de un monstruo atómico.', 125, 3);
 
 
+/* --ACTORS_MOVIES
 
+INSERT INTO actors_movies (actor_id, movie_id) VALUES (1, 1);
+INSERT INTO actors_movies (actor_id, movie_id) VALUES (2, 1);
+INSERT INTO actors_movies (actor_id, movie_id) VALUES (3, 2);
+INSERT INTO actors_movies (actor_id, movie_id) VALUES (4, 2);
+INSERT INTO actors_movies (actor_id, movie_id) VALUES (5, 3);
+INSERT INTO actors_movies (actor_id, movie_id) VALUES (6, 3);
+INSERT INTO actors_movies (actor_id, movie_id) VALUES (7, 3);
+INSERT INTO actors_movies (actor_id, movie_id) VALUES (8, 4);
+INSERT INTO actors_movies (actor_id, movie_id) VALUES (9, 4);
+INSERT INTO actors_movies (actor_id, movie_id) VALUES (10, 5);
+INSERT INTO actors_movies (actor_id, movie_id) VALUES (11, 5); */
 

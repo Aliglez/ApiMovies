@@ -28,6 +28,12 @@ public class Movies {
     @JoinColumn(name = "genre_id", nullable = true)
     private Genres genres;
 
+    /* @JoinTable(
+        name = "actors_movies", joinColumns = @JoinColumn( name = "movies_id", nullable = false ), inverseJoinColumns = @JoinColumn(name = "actor_id", nullable = false)
+    )
+    @ManyToMany(cascade = CascadeType.ALL)
+    private List<Actors> actors; */
+
     public Movies() {
     }
 
